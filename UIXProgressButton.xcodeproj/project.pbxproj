@@ -1,0 +1,295 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E4743E3B1D7BBC5B008B6452 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4743E3A1D7BBC5B008B6452 /* AppDelegate.swift */; };
+		E4743E3D1D7BBC5B008B6452 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4743E3C1D7BBC5B008B6452 /* ViewController.swift */; };
+		E4743E401D7BBC5B008B6452 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4743E3E1D7BBC5B008B6452 /* Main.storyboard */; };
+		E4743E421D7BBC5B008B6452 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4743E411D7BBC5B008B6452 /* Assets.xcassets */; };
+		E4743E451D7BBC5B008B6452 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4743E431D7BBC5B008B6452 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E4743E371D7BBC5B008B6452 /* UIXProgressButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIXProgressButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4743E3A1D7BBC5B008B6452 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E4743E3C1D7BBC5B008B6452 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E4743E3F1D7BBC5B008B6452 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E4743E411D7BBC5B008B6452 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E4743E441D7BBC5B008B6452 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E4743E461D7BBC5B008B6452 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E4743E341D7BBC5B008B6452 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E4743E2E1D7BBC5B008B6452 = {
+			isa = PBXGroup;
+			children = (
+				E4743E391D7BBC5B008B6452 /* UIXProgressButton */,
+				E4743E381D7BBC5B008B6452 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E4743E381D7BBC5B008B6452 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E4743E371D7BBC5B008B6452 /* UIXProgressButton.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E4743E391D7BBC5B008B6452 /* UIXProgressButton */ = {
+			isa = PBXGroup;
+			children = (
+				E4743E3A1D7BBC5B008B6452 /* AppDelegate.swift */,
+				E4743E3C1D7BBC5B008B6452 /* ViewController.swift */,
+				E4743E3E1D7BBC5B008B6452 /* Main.storyboard */,
+				E4743E411D7BBC5B008B6452 /* Assets.xcassets */,
+				E4743E431D7BBC5B008B6452 /* LaunchScreen.storyboard */,
+				E4743E461D7BBC5B008B6452 /* Info.plist */,
+			);
+			path = UIXProgressButton;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E4743E361D7BBC5B008B6452 /* UIXProgressButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4743E491D7BBC5B008B6452 /* Build configuration list for PBXNativeTarget "UIXProgressButton" */;
+			buildPhases = (
+				E4743E331D7BBC5B008B6452 /* Sources */,
+				E4743E341D7BBC5B008B6452 /* Frameworks */,
+				E4743E351D7BBC5B008B6452 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UIXProgressButton;
+			productName = UIXProgressButton;
+			productReference = E4743E371D7BBC5B008B6452 /* UIXProgressButton.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E4743E2F1D7BBC5B008B6452 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Guy Umbright";
+				TargetAttributes = {
+					E4743E361D7BBC5B008B6452 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = E4743E321D7BBC5B008B6452 /* Build configuration list for PBXProject "UIXProgressButton" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E4743E2E1D7BBC5B008B6452;
+			productRefGroup = E4743E381D7BBC5B008B6452 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E4743E361D7BBC5B008B6452 /* UIXProgressButton */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E4743E351D7BBC5B008B6452 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4743E451D7BBC5B008B6452 /* LaunchScreen.storyboard in Resources */,
+				E4743E421D7BBC5B008B6452 /* Assets.xcassets in Resources */,
+				E4743E401D7BBC5B008B6452 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E4743E331D7BBC5B008B6452 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4743E3D1D7BBC5B008B6452 /* ViewController.swift in Sources */,
+				E4743E3B1D7BBC5B008B6452 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E4743E3E1D7BBC5B008B6452 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E4743E3F1D7BBC5B008B6452 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E4743E431D7BBC5B008B6452 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E4743E441D7BBC5B008B6452 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E4743E471D7BBC5B008B6452 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E4743E481D7BBC5B008B6452 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E4743E4A1D7BBC5B008B6452 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = UIXProgressButton/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.umbrightconsulting.UIXProgressButton;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E4743E4B1D7BBC5B008B6452 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = UIXProgressButton/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.umbrightconsulting.UIXProgressButton;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E4743E321D7BBC5B008B6452 /* Build configuration list for PBXProject "UIXProgressButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4743E471D7BBC5B008B6452 /* Debug */,
+				E4743E481D7BBC5B008B6452 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4743E491D7BBC5B008B6452 /* Build configuration list for PBXNativeTarget "UIXProgressButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4743E4A1D7BBC5B008B6452 /* Debug */,
+				E4743E4B1D7BBC5B008B6452 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E4743E2F1D7BBC5B008B6452 /* Project object */;
+}
