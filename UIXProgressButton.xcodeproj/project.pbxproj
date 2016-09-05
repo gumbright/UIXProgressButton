@@ -12,6 +12,7 @@
 		E4743E401D7BBC5B008B6452 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4743E3E1D7BBC5B008B6452 /* Main.storyboard */; };
 		E4743E421D7BBC5B008B6452 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4743E411D7BBC5B008B6452 /* Assets.xcassets */; };
 		E4743E451D7BBC5B008B6452 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4743E431D7BBC5B008B6452 /* LaunchScreen.storyboard */; };
+		E4743E4D1D7BBCB7008B6452 /* UIXProgressButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4743E4C1D7BBCB7008B6452 /* UIXProgressButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		E4743E411D7BBC5B008B6452 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4743E441D7BBC5B008B6452 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4743E461D7BBC5B008B6452 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4743E4C1D7BBCB7008B6452 /* UIXProgressButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIXProgressButton.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		E4743E391D7BBC5B008B6452 /* UIXProgressButton */ = {
 			isa = PBXGroup;
 			children = (
+				E4743E4C1D7BBCB7008B6452 /* UIXProgressButton.swift */,
 				E4743E3A1D7BBC5B008B6452 /* AppDelegate.swift */,
 				E4743E3C1D7BBC5B008B6452 /* ViewController.swift */,
 				E4743E3E1D7BBC5B008B6452 /* Main.storyboard */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4743E3D1D7BBC5B008B6452 /* ViewController.swift in Sources */,
+				E4743E4D1D7BBCB7008B6452 /* UIXProgressButton.swift in Sources */,
 				E4743E3B1D7BBC5B008B6452 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
