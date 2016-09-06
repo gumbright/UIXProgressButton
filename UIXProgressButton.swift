@@ -52,7 +52,26 @@ public class UIXProgressButton: UIControl
             updateForCurrentState()
         }
     }
-    
+
+    @IBInspectable public var value : CGFloat = 0.0
+        {
+        didSet {
+            if value < 0.0
+            {
+                value = 0.0
+            } else if value > 1.0
+            {
+                value = 1.0
+            }
+            self.updateProgressArc()
+            self.updateProgress()
+        }
+    }
+
+    var borderLayer : CAShapeLayer = CAShapeLayer()
+    var progressLayer : CAShapeLayer = CAShapeLayer()
+    var controlLayer : CALayer = CALayer()
+
     /////////////////////////////////////////////////////
     //
     /////////////////////////////////////////////////////
@@ -90,6 +109,21 @@ public class UIXProgressButton: UIControl
     {
         super.init(coder: aDecoder)
         self.commonInit()
+    }
+    
+    /////////////////////////////////////////////////////
+    //
+    /////////////////////////////////////////////////////
+    func addBorderLayer()
+    {
+        self.borderLayer.path = self.pathForBorder()
+        self.updateBorder()
+        self.borderLayer.lineCap = kCALineCapRound
+        self.borderLayer.backgroundColor = UIColor.clearColor().CGColor
+        self.borderLayer.fillColor = UIColor.clearColor().CGColor
+        self.borderLayer.shouldRasterize = true
+        self.borderLayer.rasterizationScale = 2.0 * UIScreen.mainScreen().scale
+        self.layer.addSublayer(self.borderLayer)
     }
     
     
@@ -139,14 +173,6 @@ public class UIXProgressButton: UIControl
         return color ?? UIColor.grayColor()
     }
     
-    @IBInspectable public var currentProgress : CGFloat = 1.0  //this is value
-    {
-        //need to make sure value is 0-1
-        didSet {
-            self.updateProgressArc()
-        }
-    }
-    
 //    override public var tintColor : UIColor!
 //    {
 //        didSet {
@@ -164,26 +190,15 @@ public class UIXProgressButton: UIControl
     
 //    var selectedTintColor = UIColor.blackColor()
     
-    var borderLayer : CAShapeLayer = CAShapeLayer()
-    var progressLayer : CAShapeLayer = CAShapeLayer()
-    var controlLayer : CALayer = CALayer()
-
 
     /////////////////////////////////////////////////////
     //
     /////////////////////////////////////////////////////
-    func addBorderLayer()
+    func setValue(value: CGFloat, animated: Bool)
     {
-        self.borderLayer.path = self.pathForBorder()
-        self.updateBorder()
-        self.borderLayer.lineCap = kCALineCapRound
-        self.borderLayer.backgroundColor = UIColor.clearColor().CGColor
-        self.borderLayer.fillColor = UIColor.clearColor().CGColor
-        self.borderLayer.shouldRasterize = true
-        self.borderLayer.rasterizationScale = 2.0 * UIScreen.mainScreen().scale
-        self.layer.addSublayer(self.borderLayer)
+        
     }
-
+    
     /////////////////////////////////////////////////////
     //
     /////////////////////////////////////////////////////
@@ -227,6 +242,8 @@ public class UIXProgressButton: UIControl
         self.progressLayer.fillColor = UIColor.clearColor().CGColor
         self.progressLayer.shouldRasterize = true
         self.progressLayer.rasterizationScale = 2.0 * UIScreen.mainScreen().scale
+        self.progressLayer.frame = self.bounds
+        self.progressLayer.transform = CATransform3DMakeRotation(CGFloat(radians(-90.0)), 0.0, 0.0, 1.0)
         self.updateProgress()
         self.layer.addSublayer(self.progressLayer)
     }
@@ -240,9 +257,11 @@ public class UIXProgressButton: UIControl
         layerRect = CGRectInset(layerRect, progressWidth/2, progressWidth/2)
         print("progress rect = \(layerRect)")
         
-        let angle : Double = 360.0 * Double(self.currentProgress)
+        let angle : Double = 360.0 * Double(self.value)
         let arcPath = CGPathCreateMutable()
-        CGPathAddArc(arcPath, nil, CGRectGetMidX(layerRect), CGRectGetMidY(layerRect), layerRect.size.width/2.0, CGFloat(radians(0.0-90.0)), CGFloat(radians(angle-90.0)), false)
+        let start = CGFloat(radians(0.0))
+        let end = CGFloat(radians(angle))
+        CGPathAddArc(arcPath, nil, CGRectGetMidX(layerRect), CGRectGetMidY(layerRect), layerRect.size.width/2.0, start, end, false) //???
         
         return arcPath
     }
@@ -274,8 +293,6 @@ public class UIXProgressButton: UIControl
         }
         
         self.progressLayer.strokeColor = self.tintForCurrentState(.Progress).CGColor
-        self.progressLayer.strokeStart = 0
-        self.progressLayer.strokeEnd = self.currentProgress
     }
 
     /////////////////////////////////////////////////////
@@ -321,13 +338,7 @@ public class UIXProgressButton: UIControl
     /////////////////////////////////////////////////////
     func updateProgressArc()
     {
-        if (self.progressLayer.path == nil)
-        {
-            self.progressLayer.path = self.pathForProgress()
-        }
-        
-        self.progressLayer.strokeStart = 0
-        self.progressLayer.strokeEnd = self.currentProgress
+        self.progressLayer.path = self.pathForProgress()
     }
 
     /////////////////////////////////////////////////////
@@ -335,7 +346,6 @@ public class UIXProgressButton: UIControl
     /////////////////////////////////////////////////////
     override public func beginTrackingWithTouch(touch: UITouch, withEvent event: UIEvent?) -> Bool
     {
-//        self.selectedTintColor = self.tintColor
         self.tintColor = UIColor.grayColor()
         self.selected = true
         return true
@@ -354,7 +364,6 @@ public class UIXProgressButton: UIControl
     /////////////////////////////////////////////////////
     override public func endTrackingWithTouch(touch: UITouch?, withEvent event: UIEvent?)
     {
-//        self.tintColor = self.selectedTintColor
         self.selected = false
     }
     

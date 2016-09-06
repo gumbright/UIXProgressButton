@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -24,16 +25,54 @@
                                     <constraint firstAttribute="width" constant="100" id="Fb7-Ic-axj"/>
                                     <constraint firstAttribute="height" constant="100" id="lG4-Pp-TRv"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="progressButton1Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wOe-qu-6ck"/>
+                                </connections>
+                            </view>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RHZ-1t-l2n">
+                                <rect key="frame" x="20" y="549" width="51" height="31"/>
+                                <connections>
+                                    <action selector="enabledSwitchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="VWf-7x-FlA"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enabled" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdN-T6-lcE">
+                                <rect key="frame" x="77" y="554" width="62" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="46j-XG-Tdd" customClass="UIXProgressButton" customModule="UIXProgressButton" customModuleProvider="target">
+                                <rect key="frame" x="275" y="160" width="50" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="DVG-Ns-WnX"/>
+                                    <constraint firstAttribute="height" constant="50" id="dHx-WR-vSA"/>
+                                    <constraint firstAttribute="width" constant="50" id="pMz-9k-jNY"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="zn3-qO-vET"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="DVG-Ns-WnX"/>
+                                        <exclude reference="zn3-qO-vET"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="RHZ-1t-l2n" secondAttribute="bottom" constant="20" id="4Z2-Nh-NGU"/>
+                            <constraint firstItem="RHZ-1t-l2n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="7qk-cQ-Xby"/>
+                            <constraint firstItem="hdN-T6-lcE" firstAttribute="centerY" secondItem="RHZ-1t-l2n" secondAttribute="centerY" id="Aad-Nh-uBX"/>
                             <constraint firstItem="uA4-Q8-K9y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HLX-j3-hVE"/>
+                            <constraint firstItem="hdN-T6-lcE" firstAttribute="leading" secondItem="RHZ-1t-l2n" secondAttribute="trailing" constant="8" symbolic="YES" id="Sg5-Kc-7Gt"/>
                             <constraint firstItem="uA4-Q8-K9y" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="T1k-iz-3ZJ"/>
+                            <constraint firstItem="46j-XG-Tdd" firstAttribute="top" secondItem="uA4-Q8-K9y" secondAttribute="bottom" constant="20" id="TmZ-GS-lNE"/>
+                            <constraint firstItem="46j-XG-Tdd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ixQ-g6-6Ii"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="progressButton1" destination="uA4-Q8-K9y" id="Zui-2e-q71"/>
+                        <outlet property="progressButton2" destination="46j-XG-Tdd" id="f7B-Kq-U7F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
