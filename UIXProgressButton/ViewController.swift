@@ -21,14 +21,14 @@ class ViewController: UIViewController {
         progressButton1.setTint(UIColor.purpleColor(), forElement: .Border, forControlState: .Normal)
         progressButton1.setTint(UIColor.greenColor(), forElement: .Progress, forControlState: .Normal)
         progressButton1.controlImage = UIImage(named: "Whistle")
-        progressButton1.value = 0.0
+        progressButton1.value = 0.25
         
         ////
         progressButton2.setTint(UIColor.blueColor(), forElement: .Border, forControlState: .Normal)
         progressButton2.setTint(UIColor.greenColor(), forElement: .Progress, forControlState: .Normal)
         progressButton2.setTint(UIColor.orangeColor(), forElement: .Border, forControlState: .Selected)
         progressButton2.setTint(UIColor.yellowColor(), forElement: .Progress, forControlState: .Selected)
-        progressButton2.value = 0.0
+        progressButton2.value = 0.75
         progressButton2.controlImage = UIImage(named: "Whistle")
     }
 
@@ -41,7 +41,7 @@ class ViewController: UIViewController {
     var progress1Timer :NSTimer?
     @IBAction func progressButton1Pressed(sender: AnyObject) {
         progressButton1.value = 0
-        progress1Timer = NSTimer.scheduledTimerWithTimeInterval(0.25, target: self, selector: #selector(progress1TimerFired(_:)), userInfo: nil, repeats: true)
+        progress1Timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: #selector(progress1TimerFired(_:)), userInfo: nil, repeats: true)
     }
     
     func progress1TimerFired(timer : NSTimer)

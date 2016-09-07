@@ -63,7 +63,7 @@ public class UIXProgressButton: UIControl
             {
                 value = 1.0
             }
-            self.updateProgressArc()
+            //self.updateProgressArc()
             self.updateProgress()
         }
     }
@@ -194,10 +194,10 @@ public class UIXProgressButton: UIControl
     /////////////////////////////////////////////////////
     //
     /////////////////////////////////////////////////////
-    func setValue(value: CGFloat, animated: Bool)
-    {
-        
-    }
+//    func setValue(value: CGFloat, animated: Bool)
+//    {
+//        
+//    }
     
     /////////////////////////////////////////////////////
     //
@@ -245,6 +245,8 @@ public class UIXProgressButton: UIControl
         self.progressLayer.frame = self.bounds
         self.progressLayer.transform = CATransform3DMakeRotation(CGFloat(radians(-90.0)), 0.0, 0.0, 1.0)
         self.updateProgress()
+        self.progressLayer.strokeStart = 0.0
+        self.progressLayer.strokeEnd = self.value
         self.layer.addSublayer(self.progressLayer)
     }
 
@@ -257,13 +259,15 @@ public class UIXProgressButton: UIControl
         layerRect = CGRectInset(layerRect, progressWidth/2, progressWidth/2)
         print("progress rect = \(layerRect)")
         
-        let angle : Double = 360.0 * Double(self.value)
-        let arcPath = CGPathCreateMutable()
-        let start = CGFloat(radians(0.0))
-        let end = CGFloat(radians(angle))
-        CGPathAddArc(arcPath, nil, CGRectGetMidX(layerRect), CGRectGetMidY(layerRect), layerRect.size.width/2.0, start, end, false) //???
-        
-        return arcPath
+//        let angle : Double = 360.0 * Double(self.value)
+//        let arcPath = CGPathCreateMutable()
+//        let start = CGFloat(radians(0.0))
+//        let end = CGFloat(radians(angle))
+//        CGPathAddArc(arcPath, nil, CGRectGetMidX(layerRect), CGRectGetMidY(layerRect), layerRect.size.width/2.0, start, end, false) //???
+//        
+//        return arcPath
+        let path = CGPathCreateWithEllipseInRect(layerRect, nil)
+        return path
     }
 
     /////////////////////////////////////////////////////
@@ -293,6 +297,7 @@ public class UIXProgressButton: UIControl
         }
         
         self.progressLayer.strokeColor = self.tintForCurrentState(.Progress).CGColor
+        self.progressLayer.strokeEnd = self.value
     }
 
     /////////////////////////////////////////////////////
