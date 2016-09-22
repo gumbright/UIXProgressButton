@@ -63,7 +63,6 @@ public class UIXProgressButton: UIControl
             {
                 value = 1.0
             }
-            //self.updateProgressArc()
             self.updateProgress()
         }
     }
@@ -114,15 +113,32 @@ public class UIXProgressButton: UIControl
     /////////////////////////////////////////////////////
     //
     /////////////////////////////////////////////////////
+    override public func layoutSubviews()
+    {
+        super.layoutSubviews()
+        self.borderLayer.frame = self.bounds
+        self.borderLayer.path = self.pathForBorder()
+        self.progressLayer.frame = self.bounds
+        self.progressLayer.path = self.pathForProgress()
+        self.controlLayer.frame = self.bounds
+        self.setControlImage()
+        updateForCurrentState()
+        print("layoutSubviews")
+    }
+    
+    /////////////////////////////////////////////////////
+    //
+    /////////////////////////////////////////////////////
     func addBorderLayer()
     {
         self.borderLayer.path = self.pathForBorder()
         self.updateBorder()
         self.borderLayer.lineCap = kCALineCapRound
         self.borderLayer.backgroundColor = UIColor.clearColor().CGColor
-        self.borderLayer.fillColor = UIColor.clearColor().CGColor
+        self.borderLayer.fillColor = UIColor.orangeColor().CGColor //UIColor.clearColor().CGColor
         self.borderLayer.shouldRasterize = true
         self.borderLayer.rasterizationScale = 2.0 * UIScreen.mainScreen().scale
+        self.borderLayer.frame = self.bounds
         self.layer.addSublayer(self.borderLayer)
     }
     
@@ -148,7 +164,6 @@ public class UIXProgressButton: UIControl
         }
         elementTints[element.rawValue]![state.rawValue] = tint
         updateForCurrentState()
-//        self.updateImageForElement(element)
     }
     
     /////////////////////////////////////////////////////
