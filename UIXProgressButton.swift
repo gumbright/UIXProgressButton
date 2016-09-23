@@ -135,7 +135,7 @@ public class UIXProgressButton: UIControl
         self.updateBorder()
         self.borderLayer.lineCap = kCALineCapRound
         self.borderLayer.backgroundColor = UIColor.clearColor().CGColor
-        self.borderLayer.fillColor = UIColor.orangeColor().CGColor //UIColor.clearColor().CGColor
+        self.borderLayer.fillColor = UIColor.clearColor().CGColor
         self.borderLayer.shouldRasterize = true
         self.borderLayer.rasterizationScale = 2.0 * UIScreen.mainScreen().scale
         self.borderLayer.frame = self.bounds
